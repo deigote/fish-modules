@@ -16,17 +16,23 @@ Creating a module is as easy as creating a git repository with a functions direc
 
 ### Using existing modules in your fish shell
 
-  - Create a file in fish home (defaults to $HOME/.config/fish) called **modules_config.fish** and add each module configuration with the format *module <git_repository_url> <relative_path> [<branch>]*.  The branch is optional and defaults to master. An example of a possible modules config file is:
+ - Create a file in fish home (defaults to $HOME/.config/fish) called **modules_config.fish** and add each module configuration with the format *module <git_repository_url> <relative_path> [<branch>]*.  The branch is optional and defaults to master. An example of a possible modules config file is:
 
-    module "git@github.com:deigote/fish-common.git" fish-common
-    module "git@github.com:deigote/gh-issues-flow.git" gh-issues-flow
+    ```
+     module "git@github.com:deigote/fish-common.git" fish-common
+     module "git@github.com:deigote/gh-issues-flow.git" gh-issues-flow
+    ```
+    
+ - Then init or update the modules with the following command (adjust the fish-modules path to where you installed it if necessary):
 
-  - Then init or update the modules with the following command (adjust the fish-modules path to where you installed it if necessary):
-
+    ```
     ~/.config/fish/fish-modules/update_modules.fish
+    ```
     
  - Add the following line to your config.fish file (which by default can be found in $HOME/.config/fish/config.fish):
 
+    ```
     # Fish modules
     source $HOME/.config/fish/fish-modules/add_modules_to_path.fish
+    ```
     
